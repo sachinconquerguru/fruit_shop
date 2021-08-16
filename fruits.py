@@ -9,7 +9,7 @@ def print_fruit_menu():
     print("2.Delete fruit by name")
     print("3.Search fruit by name and rate")
     print("4.Change fruit name and rate")
-    print("5.Add to cart")
+    print("5.Display and Buy")
     print("6.Display")
     print("7.Exit")
 
@@ -89,7 +89,7 @@ def change__fruit_menu():
 
 def add_to_cart():
     print("........................Adding to cart..........................................")
-    fru_id = input("\tEnter the fruit id")
+    fru_id = input("\tEnter the fruit id : ")
     if fru_id in fruits.keys():
         cart_list.append(fru_id)
         print(cart_list)
@@ -106,13 +106,16 @@ def del_fruit_id_from_cart():
             print("\twrong fruit id")
 
 def display_bill():
+    print("\t-fruit_id-----fruit name -----fruit rate --")
     for i in cart_list:
+        
         print(f"\t{i} | {fruits[i]['name']} | {fruits[i]['rate']}")
 
 def manage_add_cart():
-    print("1 . Add fruits to cart")
-    print("1 . Delete fruit from")
-    print("1 . cart Bill")
+    print("\t1 . Add fruits to cart")
+    print("\t2 . Delete fruit from")
+    print("\t3 . cart Bill")
+    print("\t4 . exit")
 
 def main_manage_add_cart(): 
     manage_add_cart()
